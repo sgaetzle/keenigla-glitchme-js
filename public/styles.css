@@ -1,0 +1,137 @@
+*, *::after, *::before { 
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    /*box-shadow: 3px 3px 10px black; */
+  }
+  
+  body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 8rem);
+    grid-template-rows: 2rem 3rem 21rem 4rem 8rem;
+    gap: .5rem;
+    cursor: pointer;
+    justify-content: center;
+    padding-top: 1rem;
+    cursor: auto;
+  }
+  
+  .deck {
+    height: 130px;
+    width: 85px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: black;
+    border-radius: .5rem;
+    user-select: none;
+    box-shadow: 3px 3px 5px grey;
+    padding: 10px;
+  }
+  
+  .main-deck-slot {
+    position: relative;    
+    left: 30px;
+    width: 85px;
+  }
+
+  .main-deck {
+    /*background-color: green;    */
+    background-image: url("https://cdn.glitch.global/55835092-c1bf-45c2-8240-983c37c117d9/deck_backcover1.jpg?v=1643276261039");
+    background-image: url("https://cdn.glitch.global/55835092-c1bf-45c2-8240-983c37c117d9/deck_backcover2.jpg?v=1643277108343");
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+  
+  .text, .elusername, .title {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .card-slot {
+    grid-column: span 2;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 1rem;
+  }
+  
+  .card {
+    position: absolute;
+    height: 260px;
+    width: 170px;
+    border: 1px solid black;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    user-select: none;
+    box-shadow: 3px 3px 10px grey;
+    background-color: white;
+  }
+
+  .card2{
+    z-index: 1;
+    top: 30px;
+    left: 30px;
+	  transform: rotate(10deg);
+  }
+  .card1{
+    z-index: 2;
+    top: 10px;
+    left: 70px;
+	  transform: rotate(35deg);
+  }
+  .card0{
+    z-index: 3;
+    top: 60px;
+    left: 45px;
+	  transform: rotate(-30deg);
+  }
+
+  .card.red {
+    color: red;
+  }
+  
+  .card.black {
+    color: black;
+  }
+  
+  .card::before,
+  .card::after {
+    position: absolute;
+    content: attr(data-value);
+    font-size: 2rem;
+  }
+  
+  .card::before {
+    top: .5rem;
+    left: .5rem
+  }
+  
+  .card::after {
+    bottom: .5rem;
+    right: .5rem;
+    transform: rotate(180deg);
+  }
+  .userlist {
+    /*position: relative;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;*/
+  }
+
+  .button-shuffle{
+    position: relative;
+    top: 30px;
+    left: 30px;
+  }
