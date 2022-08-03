@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--meta http-equiv="X-UA-Compatible" content="ie=edge"-->
+  <title>Keenigla</title>
+  <script src="client.js" type="module"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+  <div class="title"><h1>Keenigla</h1></div>
+  <div class="elusername">
+    <div class="input-name">
+      <input class="input-nickname" type="text">
+      <div class="button-save-name button" align="center"><button>Spielername speichern</button></div>
+      <div class="nickname"></div>
+    </div>
+  </div>
+  <div class="main-card-slot card-slot"></div>
+  <div class="text"></div>
+  <div class="userlist"></div>
+  <div class="newCards">
+    <div class="main-deck-slot deck-slot"></div>
+    <div class="button-shuffle button material-icons" style="font-size: 64px;visibility: hidden;">refresh</div>
+  </div>
+  
+
+
+  <script src="/socket.io/socket.io.js"></script>
+  </body>
+</html>
